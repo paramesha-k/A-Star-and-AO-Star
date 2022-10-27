@@ -1,0 +1,11 @@
+#INPUT DATA FOR THE GRAPH IN MAXRESDEFAULT.JPG
+h4 = {'S': 1, 'A': 7, 'B': 12, 'C': 13, 'D': 5, 'E': 6, 'F': 5, 'G': 7, 'H': 2}  # Heuristic values of Nodes 
+
+graph4 = {                                        # Graph of Nodes and Edges 
+    'S': [['A','B'], ['C']],                      # Neighbors of Node 'A', B, C & D with repective weights 
+    'A': [['D'], ['E']],                          # Neighbors are included in a list of lists
+    'C': [['F','G']],
+    'D': [['H']]                              # Each sublist indicate a "OR" node or "AND" nodes
+}
+AOList=[['S'],['A','B'],['C'],['D'],['E'],['F','G'],['H']]
+aoStar(graph4, h4, 'S')
